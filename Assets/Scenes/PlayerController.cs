@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float movementSpeed;
     public float rotationSpeed;
 
+    public AudioManager miAM;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +44,7 @@ public class PlayerController : MonoBehaviour
     {        
         if (col.gameObject.name == "DeathWall")
         {
+            miAM.PlayClip();
             Destroy(gameObject);
         }
     }
